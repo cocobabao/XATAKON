@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="keyflow-polish.css">
+    <link rel="stylesheet" href="top-login-match.css">
+</head>
+<body class="top-page">
+
+    <div class="bg"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-text">KeyFlow</span>
+                <span class="logo-badge">ID</span>
+            </div>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    <span>Главная</span>
+                </a>
+                <a href="index.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                        <path d="M4 22h16"/>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22"/>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22"/>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                    </svg>
+                    <span>Топы</span>
+                </a>
+                <a href="gamelist.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                    <span>Каталог</span>
+                </a>
+                <a href="statistika.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                    <span>Статистика</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">\n            <a href="logreg.html" class="nav-item"><span>Войти / Регистрация</span></a>
+                <a href="dostizheniya.html" class="profile-btn">
+                    <div class="avatar avatar-small">В</div>
+                    <div class="profile-info">
+                        <span class="profile-name">vladik1234</span>
+                        <span class="profile-sub">Профиль →</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <header class="top-nav">
+            <nav class="nav-links" aria-label="Основная навигация">
+                <a href="index.html" class="nav-link active">ТОП</a>
+                <a href="gamelist.html" class="nav-link">Геймлист</a>
+                <a href="statistika.html" class="nav-link">Статистика</a>
+                <a href="dostizheniya.html" class="nav-link">Достижения</a>
+                <a href="logreg.html" class="nav-link">Войти</a>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Сменить тему" type="button">
+                <svg id="icon-moon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="icon-sun" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </header>
+
+        <main class="main">
+
+            <div class="tops-grid">
+
+                <div class="top-card">
+                    <div class="top-header">
+                        <div class="top-title">
+                            <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                            <div>
+                                <h2>Скорость</h2>
+                                <span class="top-unit">знаков в минуту</span>
+                            </div>
+                        </div>
+                        <div class="filters">
+                            <button class="filter-btn active" data-period="day">Сегодня</button>
+                            <button class="filter-btn" data-period="week">Неделя</button>
+                            <button class="filter-btn" data-period="all">Всё время</button>
+                        </div>
+                    </div>
+
+                    <div class="top-list" data-ranking="speed" aria-live="polite"></div>
+                </div>
+
+                <div class="top-card">
+                    <div class="top-header">
+                        <div class="top-title">
+                            <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                            <div>
+                                <h2>Точность</h2>
+                                <span class="top-unit">процент правильных</span>
+                            </div>
+                        </div>
+                        <div class="filters">
+                            <button class="filter-btn active" data-period="day">Сегодня</button>
+                            <button class="filter-btn" data-period="week">Неделя</button>
+                            <button class="filter-btn" data-period="all">Всё время</button>
+                        </div>
+                    </div>
+
+                    <div class="top-list" data-ranking="accuracy" aria-live="polite"></div>
+                </div>
+
+                <div class="top-card">
+                    <div class="top-header">
+                        <div class="top-title">
+                            <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                            <div>
+                                <h2>Опыт</h2>
+                                <span class="top-unit">всего XP</span>
+                            </div>
+                        </div>
+                        <div class="filters">
+                            <button class="filter-btn active" data-period="day">Сегодня</button>
+                            <button class="filter-btn" data-period="week">Неделя</button>
+                            <button class="filter-btn" data-period="all">Всё время</button>
+                        </div>
+                    </div>
+
+                    <div class="top-list" data-ranking="xp" aria-live="polite"></div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+    <script src="auth-common.js"></script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const moonIcon = document.getElementById('icon-moon');
+        const sunIcon = document.getElementById('icon-sun');
+        const applyTheme = () => {
+            const light = localStorage.getItem('theme') === 'light';
+            body.classList.toggle('light-theme', light);
+            body.setAttribute('data-theme', light ? 'light' : 'dark');
+            if (moonIcon) moonIcon.style.display = light ? 'none' : 'block';
+            if (sunIcon) sunIcon.style.display = light ? 'block' : 'none';
+        };
+        applyTheme();
+        themeToggle?.addEventListener('click', () => {
+            localStorage.setItem('theme', body.classList.contains('light-theme') ? 'dark' : 'light');
+            applyTheme();
+        });
+        window.addEventListener('storage', event => { if (event.key === 'theme') applyTheme(); });
+
+        const rankingLabels = { speed: 'зн./мин', accuracy: '%', xp: 'XP' };
+        function renderRanking(container, entries, kind) {
+            container.replaceChildren();
+            if (!entries || !entries.length) {
+                const empty = document.createElement('p'); empty.className = 'ranking-empty';
+                empty.textContent = 'Пока нет результатов'; container.appendChild(empty); return;
+            }
+            entries.forEach((entry, index) => {
+                const row = document.createElement('div');
+                row.className = 'top-row' + (index < 3 ? ` rank-${index + 1}` : '');
+                const rank = document.createElement('span'); rank.className = 'rank'; rank.textContent = String(index + 1);
+                const avatar = document.createElement('div'); avatar.className = 'avatar'; avatar.textContent = (entry.nickname || '?').slice(0, 1).toUpperCase();
+                const name = document.createElement('span'); name.className = 'name'; name.textContent = entry.nickname || 'Игрок';
+                const value = document.createElement('span'); value.className = 'value';
+                const number = Number(entry.value || 0);
+                value.textContent = kind === 'accuracy' ? `${number.toFixed(1)}%` : Math.round(number).toLocaleString('ru-RU');
+                row.append(rank, avatar, name, value); container.appendChild(row);
+            });
+        }
+        async function refreshRankings() {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/leaderboard', { cache: 'no-store' });
+                if (!response.ok) throw new Error('API leaderboard error');
+                const data = await response.json();
+                if (!data.success) throw new Error('Leaderboard unavailable');
+                document.querySelectorAll('[data-ranking]').forEach(container => {
+                    const kind = container.dataset.ranking;
+                    renderRanking(container, data[kind], kind);
+                });
+            } catch (error) {
+                document.querySelectorAll('[data-ranking]').forEach(container => {
+                    if (!container.children.length) {
+                        const message = document.createElement('p'); message.className = 'ranking-empty';
+                        message.textContent = 'Не удалось загрузить рейтинг. Проверьте, запущен ли сервер.';
+                        container.appendChild(message);
+                    }
+                });
+                console.warn('Не удалось обновить рейтинг:', error);
+            }
+        }
+        refreshRankings();
+        setInterval(refreshRankings, 10000);
+        document.querySelectorAll('.top-card .filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.top-card');
+                card.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === btn));
+            });
+        });
+    </script>
+
+</body>
+</html>

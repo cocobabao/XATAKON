@@ -1,0 +1,20 @@
+const ACHIEVEMENTS = [
+    { "id": 1, "title": "Первые шаги", "description": "Наберите текст со скоростью 100 зн/мин или более.", "icon": "🐣", "type": "speed", "target": 20, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 20 } },
+    { "id": 2, "title": "Начинающий", "description": "Наберите текст со скоростью 200 зн/мин или более.", "icon": "🌱", "type": "speed", "target": 40, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 40 } },
+    { "id": 3, "title": "Уверенный", "description": "Наберите текст со скоростью 300 зн/мин или более.", "icon": "🏆", "type": "speed", "target": 60, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 60 } },
+    { "id": 4, "title": "Продвинутый", "description": "Наберите текст со скоростью 400 зн/мин или более.", "icon": "🌳", "type": "speed", "target": 80, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 80 } },
+    { "id": 5, "title": "Опытный", "description": "Наберите текст со скоростью 500 зн/мин или более.", "icon": "⚔️", "type": "speed", "target": 100, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 100 } },
+    { "id": 6, "title": "Мастер", "description": "Наберите текст со скоростью 600 зн/мин или более.", "icon": "🛡️", "type": "speed", "target": 120, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 120 } },
+    { "id": 7, "title": "Эксперт", "description": "Наберите текст со скоростью 700 зн/мин или более.", "icon": "👑", "type": "speed", "target": 140, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 140 } },
+    { "id": 8, "title": "Виртуоз", "description": "Наберите текст со скоростью 800 зн/мин или более.", "icon": "🎻", "type": "speed", "target": 160, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 160 } },
+    { "id": 9, "title": "Легенда", "description": "Наберите текст со скоростью 900 зн/мин или более.", "icon": "🌟", "type": "speed", "target": 180, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 180 } },
+    { "id": 10, "title": "Божество клавиатуры", "description": "Наберите текст со скоростью 1000 зн/мин или более.", "icon": "⚡", "type": "speed", "target": 200, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 200 } },
+
+
+    { "id": 11, "title": "Точный удар", "description": "Сделайте 100 правильных нажатий подряд без ошибок.", "icon": "🎯", "type": "streak", "target": 100, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 100 } },
+    { "id": 12, "title": "Стальные пальцы", "description": "Сделайте 500 правильных нажатий подряд без ошибок.", "icon": "🤖", "type": "streak", "target": 500, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 500 } },
+    { "id": 13, "title": "Алмазная точность", "description": "Сделайте 1000 правильных нажатий подряд без ошибок.", "icon": "💎", "type": "streak", "target": 1000, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 1000 } },
+    { "id": 14, "title": "Неуловимый", "description": "Сделайте 5000 правильных нажатий подряд без ошибок.", "icon": "👻", "type": "streak", "target": 5000, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 5000 } },
+    { "id": 15, "title": "Кибернетический", "description": "Сделайте 10000 правильных нажатий подряд без ошибок.", "icon": "🦾", "type": "streak", "target": 10000, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 10000 } },
+    { "id": 16, "title": "Абсолют", "description": "Сделайте 25000 правильных нажатий подряд без ошибок.", "icon": "🔱", "type": "streak", "target": 25000, "unlocked": false, "unlockedDate": null, "progress": { "current": 0, "required": 25000 } },
+];

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Достижения | KeyFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_doztcih.css">
+    <link rel="stylesheet" href="keyflow-polish.css">
+</head>
+<body>
+    <div class="container">
+        
+
+        <header class="top-nav">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">ТОП</a>
+                <a href="gamelist.html" class="nav-link">Геймлист</a>
+                <a href="statistika.html" class="nav-link">Статистика</a>
+                <a href="dostizheniya.html" class="nav-link active">Достижения</a>
+                <a href="logreg.html" class="nav-link">Войти</a>
+            </nav>
+            
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Сменить тему">
+                <svg id="icon-moon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="icon-sun" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </header>
+
+
+        <section class="profile-header">
+            <div class="user-info">
+                <div class="avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <div class="user-details">
+                    <h1 class="username" id="profile-username">Загрузка...</h1>
+                    <div class="user-meta" id="profile-meta">Joined today</div>
+                </div>
+            </div>
+            
+            <div class="profile-level-large">
+                <div class="level-info">
+                    <span class="level-number" id="profile-level">0</span>
+                    <div class="level-bar">
+                        <div class="level-progress" id="profile-level-bar" data-width="0"></div>
+                    </div>
+                    <span class="level-xp" id="profile-xp">0 / 500 XP</span>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="achievements">Полученные</button>
+            <button class="tab-btn" data-tab="progress">Прогресс</button>
+        </div>
+
+
+        <section class="achievements-section">
+            <div id="achievements-list" class="achievements-list">
+                <div class="loading">Загрузка данных...</div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="auth-common.js"></script>
+    <script src="data.js"></script>
+    <script src="script123.js"></script>
+</body>
+</html>

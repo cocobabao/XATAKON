@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика | KeyFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_statick.css">
+    <link rel="stylesheet" href="keyflow-polish.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="top-nav">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">ТОП</a>
+                <a href="gamelist.html" class="nav-link">Геймлист</a>
+                <a href="statistika.html" class="nav-link active">Статистика</a>
+                <a href="dostizheniya.html" class="nav-link">Достижения</a>
+                <a href="logreg.html" class="nav-link">Войти</a>
+            </nav>
+            
+            <button id="theme-toggle" class="theme-toggle" aria-label="Сменить тему">
+                <svg id="icon-moon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="icon-sun" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-stat-tab="session">Текущая сессия</button>
+            <button class="tab-btn" data-stat-tab="overall">Общая статистика</button>
+            <button class="tab-btn" data-stat-tab="details">Детальный разбор</button>
+            <button class="tab-btn" data-stat-tab="charts">Графики</button>
+        </div>
+
+        <section class="stats-section">
+            
+            <div id="tab-session" class="stat-content active">
+                <div class="stats-grid" id="session-grid">
+                    <div class="loading">Загрузка сессии...</div>
+                </div>
+            </div>
+
+            <div id="tab-overall" class="stat-content">
+                <div class="stats-grid" id="overall-grid">
+                    <div class="loading">Загрузка статистики...</div>
+                </div>
+            </div>
+
+            <div id="tab-details" class="stat-content">
+                <div class="panel" style="padding: var(--spacing-xl);">
+                    <h3 class="section-title">Проблемные клавиши (по количеству ошибок)</h3>
+                    <p class="section-subtitle">На основе анализа последних ошибок</p>
+                    <div class="key-breakdown-grid" id="key-grid">
+                        <div class="loading">Загрузка данных...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-charts" class="stat-content">
+                <div class="panel chart-panel">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px;">
+                        <div>
+                            <h3 class="section-title">Динамика скорости и точности</h3>
+                            <p class="section-subtitle" id="chart-subtitle">За последние 30 дней</p>
+                        </div>
+                        <div class="chart-filters" style="display: flex; gap: 8px;">
+                            <button class="chart-period-btn" data-period="day" style="padding: 6px 14px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-color); cursor: pointer; transition: 0.2s;">День</button>
+                            <button class="chart-period-btn active" data-period="month" style="padding: 6px 14px; border-radius: 8px; border: 1px solid var(--accent); background: rgba(117, 221, 210, 0.1); color: var(--accent); cursor: pointer; transition: 0.2s;">Месяц</button>
+                            <button class="chart-period-btn" data-period="all" style="padding: 6px 14px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-color); cursor: pointer; transition: 0.2s;">Всё время</button>
+                        </div>
+                    </div>
+                    <div class="chart-container" style="margin-top: 20px;">
+                        <canvas id="speedChart"></canvas>
+                        <div class="chart-placeholder" id="chart-placeholder">График загружается...</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="auth-common.js"></script>
+    <script src="stats.js"></script>
+
+</body>
+</html>

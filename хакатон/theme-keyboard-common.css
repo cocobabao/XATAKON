@@ -1,0 +1,22 @@
+.theme-toggle, #theme-toggle, #themeToggle {
+  width: 42px !important; height: 42px !important; min-width: 42px; padding: 0 !important;
+  display: inline-flex !important; align-items: center; justify-content: center;
+  flex: 0 0 42px; border-radius: 12px !important; cursor: pointer;
+  background: var(--panel-2, rgba(255,255,255,.08)) !important;
+  border: 1px solid var(--border, rgba(148,163,184,.35)) !important;
+  color: var(--accent, #75ddd2) !important; box-shadow: 0 3px 12px rgba(0,0,0,.12);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+.theme-toggle:hover, #theme-toggle:hover, #themeToggle:hover { transform: rotate(12deg); border-color: var(--accent, #75ddd2) !important; }
+.theme-toggle svg, #theme-toggle svg, #themeToggle svg { width: 20px; height: 20px; }
+.key[data-finger="pinky"] { background: #fce7f3; color:#9d174d; border-color:#f472b6; }
+.key[data-finger="ring"] { background: #ffedd5; color:#9a3412; border-color:#fb923c; }
+.key[data-finger="middle"] { background: #fef9c3; color:#854d0e; border-color:#facc15; }
+.key[data-finger="index"] { background: #dcfce7; color:#166534; border-color:#4ade80; }
+.key[data-finger="thumb"] { background: #dbeafe; color:#1e40af; border-color:#60a5fa; }
+.key.shift-key, .key.backspace-key { background: #e2e8f0; color:#334155; border-color:#94a3b8; }
+.key.key-highlight, body.light-theme .key.key-highlight { background:#0ea5e9 !important; color:#fff !important; border-color:#0284c7 !important; box-shadow:0 0 0 3px rgba(14,165,233,.24), 0 0 16px rgba(14,165,233,.45); }
+.finger-legend { display:flex; flex-wrap:wrap; justify-content:center; gap:8px 14px; margin-top:10px; color:var(--muted,#64748b); font:500 12px/1.4 Inter,sans-serif; }
+.finger-legend span { display:inline-flex; align-items:center; gap:5px; }
+.finger-legend i { display:inline-block; width:10px; height:10px; border-radius:3px; }
+.finger-legend .pinky { background:#f472b6; } .finger-legend .ring { background:#fb923c; } .finger-legend .middle { background:#facc15; } .finger-legend .index { background:#4ade80; } .finger-legend .thumb { background:#60a5fa; }

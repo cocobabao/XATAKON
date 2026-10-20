@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажёр печати | KeyFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_gamelist.css">
+    <link rel="stylesheet" href="keyflow-polish.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="game-page">
+    <div class="container game-container">
+        
+        <header class="top-nav">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">ТОП</a>
+                <a href="gamelist.html" class="nav-link active">Геймлист</a>
+                <a href="statistika.html" class="nav-link">Статистика</a>
+                <a href="dostizheniya.html" class="nav-link">Достижения</a>
+                <a href="logreg.html" class="nav-link">Войти</a>
+            </nav>
+            
+            <button id="theme-toggle" class="theme-toggle" aria-label="Сменить тему">
+                <svg id="icon-moon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="icon-sun" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </header>
+
+        <main class="typing-wrapper">
+            
+            <div class="toolbar">
+                <div class="toolbar-group" id="mode-group">
+                    <button class="toolbar-btn active" data-mode="words">Слова</button>
+                    <button class="toolbar-btn" data-mode="sentences">Предложения</button>
+                    <button class="toolbar-btn" data-mode="code">Код</button>
+                    <button class="toolbar-btn" data-mode="symbols">Символы</button>
+                </div>
+                
+                <div class="toolbar-divider"></div>
+                
+                <div class="toolbar-group" id="dynamic-settings"></div>
+                
+                <div class="toolbar-divider"></div>
+                <div class="toolbar-group">
+                    <button class="toolbar-btn" id="toggle-highlight-mode">Клавиша</button>
+                    <button class="toolbar-btn" id="toggle-keyboard-btn">Скрыть клавиатуру</button>
+                </div>
+            </div>
+
+            <div id="results-screen" class="results-screen" style="display: none;">
+                <h2 class="result-title" id="result-title">Тест завершен!</h2>
+                
+                <div class="result-stats">
+                    <div class="result-item main-stat">
+                        <span class="result-value accent-text" id="res-wpm">0</span>
+                        <span class="result-label">WPM (Чистая)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-value" id="res-raw-wpm">0</span>
+                        <span class="result-label">Raw WPM (Брутто)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-value" id="res-accuracy">100%</span>
+                        <span class="result-label">Точность</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-value" id="res-time">0s</span>
+                        <span class="result-label">Время</span>
+                    </div>
+                </div>
+
+                <div class="result-text-container">
+                    <p class="result-original-text" id="res-original"></p>
+                </div>
+                <button class="restart-btn" onclick="document.location.reload()">Пройти еще раз (Tab+Enter)</button>
+            </div>
+
+            <div class="typing-area" id="typing-area"></div>
+            
+            <div id="keyboard" class="keyboard-container"></div>
+            <div class="finger-legend" aria-label="Цвета пальцев для клавиатуры">
+                <span><i class="pinky"></i>Мизинец</span>
+                <span><i class="ring"></i>Безымянный</span>
+                <span><i class="middle"></i>Средний</span>
+                <span><i class="index"></i>Указательный</span>
+                <span><i class="thumb"></i>Большой палец</span>
+            </div>
+            
+            <input type="text" id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; position: absolute; z-index: -1;">
+
+        </main>
+
+    </div>
+
+    <script src="auth-common.js"></script>
+    <script src="gamelist.js"></script>
+</body>
+</html>
